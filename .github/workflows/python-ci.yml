@@ -21,6 +21,6 @@ jobs:
       - name: Run flake8
         run: flake8 .
       - name: Run safety
-        run: safety check -r requirements.txt
+        run: safety scan -r requirements.txt
       - name: Run bandit
         run: bandit -r .
