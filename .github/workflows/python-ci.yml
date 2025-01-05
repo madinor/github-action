@@ -23,6 +23,6 @@ jobs:
       - name: Run safety
         env:
           SAFETY_API_KEY: '${{ secrets.SAFETY_API_KEY }}'
-        run: safety scan -r requirements.txt
+        run: safety scan --apply-fixes -r requirements.txt
       - name: Run bandit
         run: bandit -r .
